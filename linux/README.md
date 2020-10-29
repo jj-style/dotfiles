@@ -10,7 +10,7 @@ Take it all with `cat .bashrc >> ~/.bashrc`
 ## conkyrc
 My current conky config the way I like it (see screenshot below).  
 No idea how the config works so let's hope I never have to change it!  
-![screenshot of my conky](conky_screenshot.png)
+![screenshot of my conky](conky_screenshot.png)  
 btw, that's not my public IP, I use Protonvpn :sunglasses:
 
 ## vim
@@ -31,4 +31,7 @@ Will need to install a few dependencies:
 * `nm-applet` if you use network manager for applet in the status bar
 * `blueberry-tray` if you use bluetooth and want an applet in the status bar
 
-Note, there are some other keybindings setup for spotify and dropbox, delete these if you don't install them.
+Note, there are some other keybindings setup for spotify and dropbox, delete these if you don't install them.  
+
+For i3 config: `cp config ~/.config/i3/config`  
+For i3status config: `sudo cp i3status.conf /etc/i3status.conf`
