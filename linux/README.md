@@ -7,6 +7,10 @@ Contains some shortcuts, aliases and useful command-line functions.
 Append the contents or any bits you want to `~/.bashrc`.  
 Take it all with `cat .bashrc >> ~/.bashrc`
 
+## fish
+Config file for the fish shell.  
+Copy to `~/.config/fish/fish.config`
+
 ## conkyrc
 My current conky config the way I like it (see screenshot below).  
 No idea how the config works so let's hope I never have to change it!  
