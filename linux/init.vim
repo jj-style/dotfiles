@@ -15,15 +15,25 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-jedi'
+Plug 'wokalski/autocomplete-flow'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vimwiki/vimwiki'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "deoplete
 let g:deoplete#enable_at_startup = 1 "required
+" let g:deoplete#disable_auto_complete = 1
+"disable autocomplete on text in buffer
+call deoplete#custom#option('ignore_sources', {'_': ['around', 'buffer']})
+"maximum candidate window length
+call deoplete#custom#source('_', 'max_menu_width', 80)
+"hide when select autocomplete 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 "scroll with tab
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -39,6 +49,10 @@ filetype plugin on
 let g:vimwiki_list = [{'path': '~/Documents/notes',
                      \ 'syntax': 'markdown', 'ext': '.md'}
                      \]
+"emmet-vim
+let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 "language specific
 autocmd FileType python setl makeprg=python3\ %
