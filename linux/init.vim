@@ -7,6 +7,8 @@ syntax on
 
 "keybindings
 let mapleader = ","
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 "vim-plug stuff
 call plug#begin('~/.local/share/nvim/plugged')
@@ -17,7 +19,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tmhedberg/SimpylFold'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 
