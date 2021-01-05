@@ -1,1 +1,23 @@
 set -g -x fish_greeting ""
+
+# aliases
+## git aliases
+alias ga="git add ."
+alias gb="git branch"
+alias gc="git commit -m"
+alias gcl="git clone"
+alias gmg="git merge"
+alias gcm="git checkout master"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gd="git diff"
+alias gf="git fetch"
+alias gi="git init"
+alias gl="git log --pretty --oneline --abbrev-commit --graph --color"
+alias gp="git push origin (git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
+alias gpl="git pull"
+alias gs="git status"
+alias gx="git add . && git commit -m"
+alias prune="git branch --merged master | grep -v master | xargs -n 1 git branch -d"
+alias stash="git stash"
+alias pop="git stash pop"
