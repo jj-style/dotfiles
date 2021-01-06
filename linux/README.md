@@ -9,7 +9,7 @@ Take it all with `cat .bashrc >> ~/.bashrc`
 
 ## fish
 Config file for the fish shell.  
-Copy to `~/.config/fish/fish.config`
+Copy to `~/.config/fish/config.fish`
 
 ## conkyrc
 My current conky config the way I like it (see screenshot below).  
@@ -18,8 +18,7 @@ No idea how the config works so let's hope I never have to change it!
 btw, that's not my public IP, I use Protonvpn :sunglasses:
 
 ## vim
-Just a few useful settings like line numbers and expanding tabs.
-Copy to your home folder `cp .vimrc ~/.vimrc`
+actually use neovim now, so copy init.vim to `~/.config/nvim/init.vim`
 
 ## i3
 Configuration for i3 window manager and i3 status bar.  
