@@ -18,6 +18,8 @@ alias uninstalld="sudo pacman -Rs"
 alias update="sudo pacman -Syu"
 alias rmv_dep="sudo pacman -R $(pacman -Qdtq)"
 
+BASH_DIR=~/.bash.d
+source "$BASH_DIR/aliases.bash"
 
 # my defined functions
 # quick compile and run function for single source C/C++ programs 

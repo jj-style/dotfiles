@@ -1,5 +1,3 @@
-set -g -x fish_greeting ""
-
 # aliases
 ## git aliases
 alias ga="git add ."
@@ -14,7 +12,7 @@ alias gd="git diff"
 alias gf="git fetch"
 alias gi="git init"
 alias gl="git log --pretty --oneline --abbrev-commit --graph --color"
-alias gp="git push origin (git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
+alias gp="git push origin \$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)"
 alias gpl="git pull"
 alias gss="git status"
 alias gx="git add . && git commit -m"
@@ -27,5 +25,6 @@ alias saup="sudo apt update"
 alias saug="sudo apt upgrade"
 alias saupg="sudo apt update && sudo apt upgrade"
 alias saupgr="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias armv="sudo apt autoremove"
+alias sarmv="sudo apt autoremove"
 alias sai="sudo apt update && sudo apt install"
+
