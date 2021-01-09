@@ -5,6 +5,9 @@ set number
 set splitbelow
 syntax on
 
+"set .jsx filetypes to javascript.jsx
+au BufNewFile,BufRead *.jsx	setf javascript.jsx
+
 "keybindings
 let mapleader = ","
 " <Ctrl-l> redraws the screen and removes any search highlighting.
@@ -24,6 +27,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 "deoplete
@@ -52,9 +57,10 @@ let g:vimwiki_list = [{'path': '~/Documents/notes',
 "emmet-vim
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,javascript.jsx EmmetInstall
 
 "language specific
 autocmd FileType python setl makeprg=python3\ %
 autocmd Filetype perl setl makeprg=perl\ %
 autocmd FileType javascript setl makeprg=node\ %
+autocmd FileType javascript,javascript.jsx,css,html,json setl shiftwidth=2 tabstop=2
