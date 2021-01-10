@@ -125,6 +125,8 @@ alias public_ip='public_ipr; echo'
 
 BASH_DIR=~/.bash.d
 source "$BASH_DIR/aliases.bash"
+source "$BASH_DIR/fzf/completion.bash"
+source "$BASH_DIR/fzf/key-bindings.bash"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

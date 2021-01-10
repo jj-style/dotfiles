@@ -1,4 +1,7 @@
 # aliases
+
+alias cl="clear"
+
 ## git aliases
 alias ga="git add ."
 alias gb="git branch"
@@ -28,3 +31,14 @@ alias saupgr="sudo apt update && sudo apt upgrade && sudo apt autoremove"
 alias sarmv="sudo apt autoremove"
 alias sai="sudo apt update && sudo apt install"
 
+##protonvpn
+alias pvpn="protonvpn-cli"
+alias pvpn-sc="protonvpn-cli c --sc"
+alias pvpn-f="protonvpn-cli c -f"
+alias pvpn-r="protonvpn-cli c -r"
+alias pvpn-uk="protonvpn-cli c --cc UK"
+alias pvpn-p2p="protonvpn-cli c --p2p"
+alias pvpn-tor="protonvpn-cli c --tor"
+alias pvpns="protonvpn-cli s"
+alias pvpnd="protonvpn-cli d"
+alias vpn-conn="protonvpn-cli s | grep -q \"No active\""
