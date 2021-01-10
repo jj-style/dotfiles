@@ -16,7 +16,8 @@ No idea how the config works so let's hope I never have to change it!
 btw, that's not my public IP, I use Protonvpn :sunglasses:
 
 ## vim
-actually use neovim now, so copy init.vim to `~/.config/nvim/init.vim`
+actually use neovim now, so copy nvim folder to `~/.config/nvim`.  
+remember to install plugins (`PlugInstall`) and coc-extensions
 
 ## i3
 Configuration for i3 window manager and i3 status bar.  
