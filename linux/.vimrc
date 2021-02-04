@@ -1,5 +1,5 @@
-source $HOME/.vim.d/vim-plug/plugins.vim
 source $HOME/.vim.d/general/settings.vim
+source $HOME/.vim.d/vim-plug/plugins.vim
 source $HOME/.vim.d/keys/mappings.vim
 
 source $HOME/.vim.d/plug-config/emmet-vim.vim

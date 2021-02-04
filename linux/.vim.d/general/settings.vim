@@ -25,7 +25,6 @@ set number                              " Line numbers
 "set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=1                       " Always show tabs if more than one
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nocompatible                        " This is required by vimwiki
 filetype plugin on                      " This is required by vimwiki
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
@@ -39,3 +38,4 @@ set foldenable                          " allow folding code blocks
 set foldlevelstart=10                   " fold deep blocks by default
 set foldmethod=indent                   " python
 set hlsearch                            " highlight search results
+set noshowmode                          " We don't need to see things like -- INSERT -- anymore
