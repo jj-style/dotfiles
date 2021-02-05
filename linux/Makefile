@@ -6,17 +6,18 @@ help:						## show this help
 all: bash vim tmux				## copy all config
 
 .PHONY: bash
-#cp -r .bashrc .bash.d $(HOME)
 bash: .bashrc $(shell find .bash.d -type f)	## copy bash config
-	@echo "copying bash"
+	@cp -r .bashrc .bash.d $(HOME)
 
 .PHONY: vim	
 vim: .vimrc $(shell find .vim.d -type f)	## copy vim config
-	@echo "copying vim"
+	@cp -r .vimrc .vim.d $(HOME)
 
 .PHONY: tmux	
 tmux: .tmux.conf				## copy tmux configx
-	@echo "copying tmux"
+	@cp .tmux.conf $(HOME)
+	@git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	@~/.tmux/plugins/tpm/bin/install_plugins
 
 
 
