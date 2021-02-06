@@ -11,7 +11,9 @@ bash: .bashrc $(shell find .bash.d -type f)	## copy bash config
 
 .PHONY: vim	
 vim: .vimrc $(shell find .vim.d -type f)	## copy vim config
+	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@cp -r .vimrc .vim.d $(HOME)
+	@vim +'PlugInstall --sync' +qa
 
 .PHONY: tmux	
 tmux: .tmux.conf				## copy tmux configx
