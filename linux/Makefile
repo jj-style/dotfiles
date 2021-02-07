@@ -29,5 +29,5 @@ tmux: .tmux.conf				## copy tmux config
 	@~/.tmux/plugins/tpm/bin/install_plugins
 
 .PHONY: inputrc
-inputrc: .inpurc				## copy inputrc config
+inputrc: .inputrc				## copy inputrc config
 	@cat .inputrc >> ~/.inputrc 
