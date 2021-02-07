@@ -1,7 +1,5 @@
 # aliases
 
-alias cl="clear"
-
 ## git aliases
 alias ga="git add ."
 alias gb="git branch"
@@ -24,12 +22,14 @@ alias stash="git stash"
 alias pop="git stash pop"
 
 ## debian
-alias saup="sudo apt update"
-alias saug="sudo apt upgrade"
-alias saupg="sudo apt update && sudo apt upgrade"
-alias saupgr="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-alias sarmv="sudo apt autoremove"
-alias sai="sudo apt update && sudo apt install"
+if [[ -f /etc/debian_version  ]]; then
+    alias saup="sudo apt update"
+    alias saug="sudo apt upgrade"
+    alias saupg="sudo apt update && sudo apt upgrade"
+    alias saupgr="sudo apt update && sudo apt upgrade && sudo apt autoremove"
+    alias sarmv="sudo apt autoremove"
+    alias sai="sudo apt update && sudo apt install"
+fi
 
 ##protonvpn
 alias pvpn="protonvpn-cli"
@@ -42,3 +42,6 @@ alias pvpn-tor="protonvpn-cli c --tor"
 alias pvpns="protonvpn-cli s"
 alias pvpnd="protonvpn-cli d"
 alias vpn-conn="protonvpn-cli s | grep -q \"No active\""
+
+## misc
+alias docker_remove_imgs='docker images | grep none | awk "{ print $3;  }" | xargs docker rmi -f'
