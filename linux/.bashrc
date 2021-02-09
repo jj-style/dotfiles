@@ -113,5 +113,6 @@ alias docker_remove_imgs='docker images | grep none | awk "{ print $3; }" | xarg
 
 BASH_DIR=~/.bash.d
 source "$BASH_DIR/aliases.bash"
+source "$BASH_DIR/environment.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
