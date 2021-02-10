@@ -7,9 +7,9 @@ all: bash vim tmux inputrc			## copy all config
 
 .PHONY: bash
 bash: .bashrc $(shell find .bash.d -type f)	## copy bash config
-	@echo ">>>>> INSERTED FROM jj-style/dotfiles" >> ~/.bashrc
+	@echo "# >>>>> INSERTED FROM jj-style/dotfiles" >> ~/.bashrc
 	@cat .bashrc >> ~/.bashrc
-	@echo "<<<<< END OF INSERTED BLOCK" >> ~/.bashrc
+	@echo "# <<<<< END OF INSERTED BLOCK" >> ~/.bashrc
 	@cp -r .bash.d ~
 
 .PHONY: vim	
