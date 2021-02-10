@@ -82,7 +82,7 @@ source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
 
 # Tmux and neofetch if in vconsole
-if [[ $TERM == "screen" ]]; then
+if [[ $TERM == "linux" ]]; then
     
     if [[ ! -z "${TMUX}" ]]; then
         if command -v neofetch > /dev/null 2>&1; then
