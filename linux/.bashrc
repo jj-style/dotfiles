@@ -81,17 +81,16 @@ source "$BASH_DIR/PS1.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
 
-# Tmux and neofetch if in vconsole
+# If in vconsole start tmux
 if [[ $TERM == "linux" ]]; then
-    
-    if [[ ! -z "${TMUX}" ]]; then
-        if command -v neofetch > /dev/null 2>&1; then
-            neofetch
-        fi
-    fi
-
     if command -v tmux > /dev/null 2>&1; then
         [ -z "${TMUX}" ] && (tmux attach || tmux new -s $(whoami)) > /dev/null 2>&1
     fi
+fi
 
+# If in tmux run neofetch
+if [[ ! -z "${TMUX}" ]]; then
+    if command -v neofetch > /dev/null 2>&1; then
+        neofetch
+    fi
 fi
