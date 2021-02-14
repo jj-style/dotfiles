@@ -73,6 +73,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# colour support
+export TERM=screen-256color
 
 BASH_DIR=~/.bash.d
 source "$BASH_DIR/aliases.bash"
@@ -81,16 +83,11 @@ source "$BASH_DIR/PS1.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
 
-# If in vconsole start tmux
-if [[ $TERM == "linux" ]]; then
-    if command -v tmux > /dev/null 2>&1; then
-        [ -z "${TMUX}" ] && (tmux attach || tmux new -s $(whoami)) > /dev/null 2>&1
-    fi
-fi
-
-# If in tmux run neofetch
-if [[ ! -z "${TMUX}" ]]; then
-    if command -v neofetch > /dev/null 2>&1; then
-        neofetch
+NFETCH=tmux # always|tmux|never
+if [[ $NFETCH != "never" ]]; then
+    if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
+        if command -v neofetch > /dev/null 2>&1; then
+            neofetch
+        fi
     fi
 fi

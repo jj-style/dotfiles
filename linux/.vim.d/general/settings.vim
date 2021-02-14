@@ -23,7 +23,8 @@ set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set number                              " Line numbers
 "set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
+"set background=dark                     " tell vim what the background color looks like
+colorscheme desert                      " set colorscheme
 set showtabline=1                       " Always show tabs if more than one
 set nocompatible                        " This is required by vimwiki
 filetype plugin on                      " This is required by vimwiki
