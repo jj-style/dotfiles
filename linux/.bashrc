@@ -83,6 +83,12 @@ source "$BASH_DIR/PS1.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
 
+# attach/create tmux session if in graphical display
+if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}"  ]; then
+     # if not inside a tmux session, and if no session is started, start a new session
+     [ -z "${TMUX}" ] && (tmux attach -t $USER || tmux new -s $USER  ) >/dev/null 2>&1
+fi
+
 NFETCH=tmux # always|tmux|never
 if [[ $NFETCH != "never" ]]; then
     if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
