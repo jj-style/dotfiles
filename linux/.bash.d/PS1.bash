@@ -3,12 +3,19 @@ GREEN="$(tput setaf 2)"
 BLUE="$(tput setaf 4)"
 RESET="$(tput sgr0)"
 
+
 exitstatus() {
     if [[ $? -eq 0 ]]; then
-        echo "${GREEN}$1${RESET}"
+        export EXIT_PROMPT="${GREEN}$1${RESET}"
     else
-        echo "${RED}$1${RESET}"
+        export EXIT_PROMPT="${RED}$1${RESET}"
     fi
 }
 
-PS1='[\u@\h:\A \W] $(exitstatus λ) '
+battery_in_vconsole() {
+    if [[ -z "$DISPLAY" ]]; then
+        echo -n "$(cat /sys/class/power_supply/BAT0/capacity)%"
+    fi
+}
+
+PS1='[\u@\h:\A:$(battery_in_vconsole) \W] λ '

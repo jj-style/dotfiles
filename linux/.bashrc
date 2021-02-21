@@ -1,3 +1,13 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+# >>>>> INSERTED FROM jj-style/dotfiles
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -74,7 +84,7 @@ if ! shopt -oq posix; then
 fi
 
 # colour support
-export TERM=screen-256color
+#export TERM=screen-256color
 
 BASH_DIR=~/.bash.d
 source "$BASH_DIR/aliases.bash"
@@ -83,13 +93,21 @@ source "$BASH_DIR/PS1.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
 
-# attach/create tmux session if in graphical display
-if command -v tmux >/dev/null 2>&1 && [ "${DISPLAY}"  ]; then
-     # if not inside a tmux session, and if no session is started, start a new session
-     [ -z "${TMUX}" ] && (tmux attach -t $USER || tmux new -s $USER  ) >/dev/null 2>&1
+# if in terminal 1 startx
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec startx
 fi
 
-NFETCH=tmux # always|tmux|never
+# if in terminal 2, tmux
+# attach/create tmux session if not in graphical display
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+    if command -v tmux >/dev/null 2>&1 && [ -z "${DISPLAY}"  ]; then
+        # if not inside a tmux session, and if no session is started, start a new session
+        [ -z "${TMUX}" ] && (tmux attach -t $USER || tmux new -s $USER  ) >/dev/null 2>&1
+    fi
+fi
+
+NFETCH=never # always|tmux|never
 if [[ $NFETCH != "never" ]]; then
     if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
         if command -v neofetch > /dev/null 2>&1; then
@@ -97,3 +115,5 @@ if [[ $NFETCH != "never" ]]; then
         fi
     fi
 fi
+# <<<<< END OF INSERTED BLOCK
+source "$HOME/.cargo/env"
