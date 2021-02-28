@@ -4,7 +4,6 @@ source $HOME/.vim.d/keys/mappings.vim
 
 source $HOME/.vim.d/plug-config/emmet-vim.vim
 source $HOME/.vim.d/plug-config/vim-airline.vim
-source $HOME/.vim.d/plug-config/vimwiki.vim
 source $HOME/.vim.d/plug-config/ranger.vim
 source $HOME/.vim.d/plug-config/closetags.vim
 

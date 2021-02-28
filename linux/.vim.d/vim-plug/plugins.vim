@@ -12,9 +12,6 @@ call plug#begin('~/.vim/plugged')
     " comment toggle
     Plug 'scrooloose/nerdcommenter'
     
-    " personal wiki
-    Plug 'vimwiki/vimwiki'
-    
     " expand to html
     Plug 'mattn/emmet-vim'
     
