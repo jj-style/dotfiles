@@ -194,6 +194,7 @@ exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 36
 # shutdown, reboot, lock screen
 #set $Locker i3lock && sleep 1
 set $Locker betterlockscreen -l dim
+bindsym $mod+Escape exec --no-startup-id $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -211,6 +212,24 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
+# External Displays Manual Management
+## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+#set $PrimaryDisplay xrandr | grep "connected primary" | awk '{ print $1 }'
+set $PrimaryDisplay eDP1
+mode "$mode_display" {
+    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of $PrimaryDisplay, mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of $PrimaryDisplay, mode "default"
+    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
+    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+x mode "$mode_display"
 
 # Brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
@@ -219,6 +238,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 # Startup stuff
 exec --no-startup-id pa-applet
 exec --no-startup-id protonvpn-applet
+exec --no-startup-id blueman-applet
 exec --no-startup-id feh --bg-fill ~/Pictures/arch.jpg
 
 # Custom key bindings
@@ -228,3 +248,5 @@ bindsym $mod+Shift+b exec torbrowser-launcher
 bindsym $mod+Mod1+e exec terminator -x ranger
 bindsym Mod1+Tab exec rofi -modi "window" -show window -font \\"DejaVu 11\\"
 
+# Default workspace for Spotify
+for_window [class="Spotify"] move --no-auto-back-and-forth container to workspace $ws10
