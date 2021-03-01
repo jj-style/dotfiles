@@ -27,4 +27,7 @@ call plug#begin('~/.vim/plugged')
 
     " ranger file explorer
     Plug 'Mizuchi/vim-ranger'
+
+    " nerdtree
+    Plug 'preservim/nerdtree'    
 call plug#end()

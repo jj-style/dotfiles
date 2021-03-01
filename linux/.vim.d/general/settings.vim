@@ -31,7 +31,7 @@ filetype plugin on                      " This is required by vimwiki
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 "set timeoutlen=100                     " By default timeoutlen is 1000 ms
-set clipboard=unnamedplus               " Copy paste between vim and everything else
+"set clipboard=unnamedplus               " Copy paste between vim and everything else
 filetype indent on                      " identify file types and load indent files
 "set lazyredraw                          " don't redraw screen when running macros
 set showmatch                           " show matched parantheses
@@ -40,3 +40,11 @@ set foldlevelstart=10                   " fold deep blocks by default
 set foldmethod=indent                   " python
 set hlsearch                            " highlight search results
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+
+
+" clipboard cross platform for Mac
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif

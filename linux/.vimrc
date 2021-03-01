@@ -6,6 +6,7 @@ source $HOME/.vim.d/plug-config/emmet-vim.vim
 source $HOME/.vim.d/plug-config/vim-airline.vim
 source $HOME/.vim.d/plug-config/ranger.vim
 source $HOME/.vim.d/plug-config/closetags.vim
+source $HOME/.vim.d/plug-config/nerdtree.vim
 
 "language specific
 au FileType python setl makeprg=python3\ %
