@@ -30,4 +30,14 @@ call plug#begin('~/.vim/plugged')
 
     " nerdtree
     Plug 'preservim/nerdtree'    
+
+    "fzf
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
+    " git wrapper
+    Plug 'tpope/vim-fugitive'    
+
+    "UNIX Stuff
+    Plug 'tpope/vim-eunuch'    
 call plug#end()
