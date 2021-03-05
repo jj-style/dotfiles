@@ -8,7 +8,7 @@ betterlockscreen 3.0.1-6
 binutils 2.36.1-2
 bison 3.7.3-1
 blueman 2.1.4-1
-brave-bin 1:1.20.110-1
+brave-bin 1:1.21.73-1
 code 1.53.2-1
 cronie 1.5.5-2
 discord 0.0.13-1
@@ -45,7 +45,7 @@ lvm2 2.03.11-5
 m4 1.4.18-3
 make 4.3-3
 man-db 2.9.4-1
-minecraft-launcher 2.2.1867-1
+minecraft-launcher 887-2
 moon-buggy 1.0.51-1
 network-manager-applet 1.20.0-2
 networkmanager 1.30.0-2
@@ -74,6 +74,7 @@ ranger 1.9.3-3
 ripgrep 12.1.1-1
 ristretto 0.10.0-3
 rofi 1.6.1-1
+rofi-greenclip 3.4-5
 rsync 3.2.3-3
 sed 4.8-1
 shotgun 2.2.0-2

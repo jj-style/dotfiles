@@ -36,7 +36,7 @@ show_volume_when_muted = true
 [[block]]
 block = "networkmanager"
 on_click = "terminator -e nmtui"
-interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
+interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+", "proton\\d+"]
 interface_name_include = []
 ap_format = "{ssid}"
 
