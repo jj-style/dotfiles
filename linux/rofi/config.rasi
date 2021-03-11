@@ -1,8 +1,0 @@
-configuration {
-    modi: "run";
-    font: "hack 10";
-    combi-modi: "window,drun,ssh";
-    icon-theme: "Adwaita";
-    show-icons: true;
- }
-@import "/usr/share/rofi/themes/purple.rasi"
