@@ -1,9 +1,8 @@
-# ==> ~/.config/rofi/config.rasi
 configuration {
     modi: "run";
     font: "hack 10";
     combi-modi: "window,drun,ssh";
-    icon-theme: "Adwaita";
+    icon-theme: "paper";
     show-icons: true;
  }
-@import "/usr/share/rofi/themes/purple.rasi"
+@import "/usr/share/rofi/themes/Arc-Dark.rasi"
