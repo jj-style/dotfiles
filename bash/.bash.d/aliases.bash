@@ -21,27 +21,42 @@ alias prune="git branch --merged master | grep -v master | xargs -n 1 git branch
 alias stash="git stash"
 alias pop="git stash pop"
 
-## debian
-if [[ -f /etc/debian_version  ]]; then
-    alias saup="sudo apt update"
-    alias saug="sudo apt upgrade"
-    alias saupg="sudo apt update && sudo apt upgrade"
-    alias saupgr="sudo apt update && sudo apt upgrade && sudo apt autoremove"
-    alias sarmv="sudo apt autoremove"
-    alias sai="sudo apt update && sudo apt install"
-fi
-
 ##protonvpn
-alias pvpn="protonvpn-cli"
-alias pvpn-sc="protonvpn-cli c --sc"
-alias pvpn-f="protonvpn-cli c -f"
-alias pvpn-r="protonvpn-cli c -r"
-alias pvpn-uk="protonvpn-cli c --cc UK"
-alias pvpn-p2p="protonvpn-cli c --p2p"
-alias pvpn-tor="protonvpn-cli c --tor"
-alias pvpns="protonvpn-cli s"
-alias pvpnd="protonvpn-cli d"
-alias vpn-conn="protonvpn-cli s | grep -q \"No active\""
+# alias pvpn="protonvpn-cli"
+# alias pvpn-sc="protonvpn-cli c --sc"
+# alias pvpn-f="protonvpn-cli c -f"
+# alias pvpn-r="protonvpn-cli c -r"
+# alias pvpn-uk="protonvpn-cli c --cc UK"
+# alias pvpn-p2p="protonvpn-cli c --p2p"
+# alias pvpn-tor="protonvpn-cli c --tor"
+# alias pvpns="protonvpn-cli s"
+# alias pvpnd="protonvpn-cli d"
+# alias vpn-conn="protonvpn-cli s | grep -q \"No active\""
+
+
+alias pvpn="sudo protonvpn"
+alias pvpn-sc="sudo protonvpn c --sc"
+alias pvpn-f="sudo protonvpn c -f"
+alias pvpn-r="sudo protonvpn c -r"
+alias pvpn-uk="sudo protonvpn c --cc UK"
+alias pvpn-p2p="sudo protonvpn c --p2p"
+alias pvpn-tor="sudo protonvpn c --tor"
+alias pvpns="sudo protonvpn s"
+alias pvpnd="sudo protonvpn d"
+alias vpn-conn="sudo protonvpn s | grep -q \"No active\""
 
 ## misc
+# get back to home directory
+alias home="cd ~"
+
+### docker
 alias docker_remove_imgs='docker images | grep none | awk "{ print $3;  }" | xargs docker rmi -f'
+alias docker_remove_cnts='docker container rm $(docker container ls -aq)'
+
+## typos
+alias tlrd="tldr"
+alias sl="ls"
+alias paman="pacman"
+alias pcaman="pacman"
+alias pcmna="pacman"
+
