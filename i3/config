@@ -273,6 +273,7 @@ bindsym $mod+b exec torbrowser-launcher
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+e exec $terminal -e ranger
 bindsym $mod+Shift+e exec thunar
+bindsym Print exec --no-startup-id xfce4-screenshooter -i
 # alt+tab behaviour for switching windows across all open workspaces
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
 # clipboard history in rofi

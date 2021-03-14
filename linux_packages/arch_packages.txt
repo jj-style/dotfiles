@@ -85,7 +85,6 @@ rofi 1.6.1-1
 rofi-greenclip 3.4-5
 rsync 3.2.3-3
 sed 4.8-1
-shotgun 2.2.0-2
 signal-desktop 1.40.1-1
 sof-firmware 1.6.1-1
 spotify-snap 1.1.46.916.g416cacf1-4
@@ -123,6 +122,7 @@ xarchiver 0.5.4.17-1
 xclip 0.13-3
 xdg-user-dirs 0.17-3
 xf86-video-intel 1:2.99.917+916+g31486f40-1
+xfce4-screenshooter 1.9.8-1
 xfce4-terminal 0.8.10-1
 xidlehook 0.10.0-1
 xorg-server 1.20.10-3
