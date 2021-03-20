@@ -6,12 +6,14 @@ autoconf
 automake
 base
 betterlockscreen
+bind
 binutils
 bison
 bitwarden-cli
 blueman
 brave-bin
 cbonsai-git
+cmatrix
 code
 cronie
 discord
@@ -53,6 +55,8 @@ make
 man-db
 minecraft-launcher
 moon-buggy
+mtr
+net-tools
 network-manager-applet
 networkmanager
 nordic-darker-theme
@@ -69,6 +73,8 @@ patch
 peek
 pfetch
 pkgconf
+pkgfile
+playerctl
 powerline-fonts
 protonvpn-applet
 protonvpn-cli-ng
@@ -101,6 +107,7 @@ thunar
 thunar-volman
 tmux
 torbrowser-launcher
+traceroute
 tree
 ttf-font-awesome-4
 ttf-liberation
@@ -129,6 +136,7 @@ xfce4-terminal
 xidlehook
 xorg-server
 xorg-xbacklight
+xorg-xev
 xorg-xinit
 xreader
 xss-lock

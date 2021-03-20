@@ -85,6 +85,7 @@ fi
 #export TERM=screen-256color
 
 BASH_DIR=~/.bash.d
+source /usr/share/doc/pkgfile/command-not-found.bash
 source "$BASH_DIR/aliases.bash"
 source "$BASH_DIR/environment.bash"
 source "$BASH_DIR/PS1.bash"
@@ -105,13 +106,14 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
     fi
 fi
 
-NFETCH=never # always|tmux|never
-if [[ $NFETCH != "never" ]]; then
+NFETCH=always # always|tmux|never
+if [[ $NFETCH != "never" ]] && [[ "${XDG_VTNR}" -ne 1 ]]; then
     if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
-        if command -v neofetch > /dev/null 2>&1; then
-            neofetch
+        if command -v pfetch > /dev/null 2>&1; then
+            pfetch
         fi
     fi
 fi
 # <<<<< END OF INSERTED BLOCK
 source "$HOME/.cargo/env"
+export PATH="$HOME/.local/bin:$PATH"
