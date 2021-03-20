@@ -89,7 +89,6 @@ ranger
 ripgrep
 ristretto
 rofi
-rofi-greenclip
 rsync
 sed
 signal-desktop
@@ -131,6 +130,7 @@ xarchiver
 xclip
 xdg-user-dirs
 xf86-video-intel
+xfce4-clipman-plugin
 xfce4-screenshooter
 xfce4-terminal
 xidlehook
