@@ -49,9 +49,17 @@ alias vpn-conn="sudo protonvpn s | grep -q \"No active\""
 # get back to home directory
 alias home="cd ~"
 
+# copy & paste to/from system clipboard
+alias xcopy="xclip -sel clip"
+alias xpaste="xclip -o -sel clip"
+
+# bitwarden-cli unlock copy export command to clipboard
+alias bw-unlock-cp='bw unlock | grep "\$ export" | awk "{print substr(\$0, index(\$0,\$2))}" | xcopy'
+
 ### docker
-alias docker_remove_imgs='docker images | grep none | awk "{ print $3;  }" | xargs docker rmi -f'
-alias docker_remove_cnts='docker container rm $(docker container ls -aq)'
+alias docker-rm-images='docker images | grep none | awk "{ print $3;  }" | xargs docker rmi -f'
+alias docker-rm-containers='docker container rm $(docker container ls -aq)'
+alias docker-gcloud-sdk='docker run --rm -it gcr.io/google.com/cloudsdktool/cloud-sdk'
 
 ## typos
 alias tlrd="tldr"
