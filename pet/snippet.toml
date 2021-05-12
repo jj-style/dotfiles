@@ -1,0 +1,24 @@
+[[snippets]]
+  description = "Remove docker images"
+  command = "docker images | grep none | awk \"{ print $3; }\" | xargs docker rmi -f"
+  output = ""
+
+[[snippets]]
+  description = "Remove docker containers"
+  command = "docker container rm $(docker container ls -aq)"
+  output = ""
+
+[[snippets]]
+  description = "gcloud sdk shell"
+  command = "docker run --rm -it gcr.io/google.com/cloudsdktool/cloud-sdk"
+  output = ""
+
+[[snippets]]
+  description = "Interactive shell in a docker container with current directory mounted"
+  command = "docker run --rm -it -v $PWD:/work -w /work <docker-image-name>"
+  output = ""
+
+[[snippets]]
+  description = "Remove all exif metadata from a file"
+  command = "exiftool -All= <file>"
+  output = ""
