@@ -17,8 +17,8 @@ alert = 10.0
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{mem_used;G}GB/{mem_total;G}GB ({mem_used_percents}%)"
-format_swap = "{swap_used;G}GB/{swap_total;G}GB ({swap_used_percents}%)"
+format_mem = "{mem_used;G}/{mem_total;G}({mem_used_percents}%)"
+format_swap = "{swap_used;G}/{swap_total;G}({swap_used_percents}%)"
 
 [[block]]
 block = "cpu"
