@@ -63,3 +63,7 @@ alias paman="pacman"
 alias pcaman="pacman"
 alias pcmna="pacman"
 
+## linode
+alias open-tunnel="echo -n tunnel open... && ssh -N -R *:2222:localhost:22 linode-tunnel-server"
+alias open-tunnel-bg="ssh -Nf -R *:2222:localhost:22 linode-tunnel-server"
+alias close-tunnel='kill $(ps -e -o pid,cmd | grep "linode-tunnel-server$" | awk "{print \$1}")'
