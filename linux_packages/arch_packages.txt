@@ -6,6 +6,7 @@ arc-icon-theme
 autoconf
 automake
 base
+bash-completion
 betterlockscreen-git
 bind
 binutils
@@ -81,6 +82,7 @@ nordic-darker-theme
 noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
+npm
 numix-icon-theme-git
 onionshare
 pa-applet-git

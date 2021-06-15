@@ -1,4 +1,6 @@
-# ==> ~/.bashrc
+#
+# ~/.bashrc
+#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -70,15 +72,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
+
+if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
 fi
 
 # colour support
@@ -87,10 +83,12 @@ fi
 BASH_DIR=~/.bash.d
 source /usr/share/doc/pkgfile/command-not-found.bash
 source "$BASH_DIR/aliases.bash"
+source "$BASH_DIR/functions.bash"
 source "$BASH_DIR/environment.bash"
 source "$BASH_DIR/PS1.bash"
 source "$BASH_DIR/fzf/completion.bash"
 source "$BASH_DIR/fzf/key-bindings.bash"
+source "$BASH_DIR/linode.bash"
 
 # if in terminal 1 startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
@@ -116,4 +114,4 @@ if [[ $NFETCH != "never" ]] && [[ "${XDG_VTNR}" -ne 1 ]]; then
 fi
 # <<<<< END OF INSERTED BLOCK
 source "$HOME/.cargo/env"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
