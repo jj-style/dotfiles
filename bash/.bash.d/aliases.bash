@@ -67,3 +67,9 @@ alias pcmna="pacman"
 alias open-tunnel="echo -n tunnel open... && ssh -N -R *:2222:localhost:22 linode-tunnel-server"
 alias open-tunnel-bg="ssh -Nf -R *:2222:localhost:22 linode-tunnel-server"
 alias close-tunnel='kill $(ps -e -o pid,cmd | grep "linode-tunnel-server$" | awk "{print \$1}")'
+
+## docker
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dcst="docker-compose start"
+alias dcsp="docker-compose stop"
