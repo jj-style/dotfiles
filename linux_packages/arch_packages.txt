@@ -3,6 +3,8 @@ android-tools
 appimagelauncher
 arandr
 arc-icon-theme
+asunder
+audacity
 autoconf
 automake
 base
@@ -26,6 +28,7 @@ docker
 docker-compose
 dockstation
 downgrader-git
+easytag
 fakeroot
 feh
 file
@@ -33,6 +36,7 @@ findutils
 firefox
 flex
 fzf
+galculator
 gawk
 gcc
 gettext
@@ -53,7 +57,6 @@ i3status-rust
 inetutils
 intel-ucode
 iotop
-ipfs-desktop
 iptables-nft
 k9s
 kubectl
@@ -77,13 +80,13 @@ nano
 net-tools
 network-manager-applet
 networkmanager
+networkmanager-openvpn
 nmap
 nordic-darker-theme
 noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
 npm
-numix-icon-theme-git
 onionshare
 pa-applet-git
 pacman
@@ -98,14 +101,17 @@ pinta
 pkgconf
 pkgfile
 playerctl
+powerline-console-fonts
 powerline-fonts
-protonvpn-applet
 protonvpn-cli-ng
 pulseaudio
 pulseaudio-bluetooth
 python-curtsies
+python-keyring
 python-numpy
 python-pip
+python-pyxdg
+python-systemd
 qbittorrent
 qemu
 qemu-arch-extra
