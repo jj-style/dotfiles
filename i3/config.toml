@@ -17,8 +17,8 @@ alert = 10.0
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{mem_used;G}/{mem_total;G}({mem_used_percents}%)"
-format_swap = "{swap_used;G}/{swap_total;G}({swap_used_percents}%)"
+format_mem = "{mem_used;G}/{mem_total;G}({mem_used_percents})"
+format_swap = "{swap_used;G}/{swap_total;G}({swap_used_percents})"
 
 [[block]]
 block = "cpu"
@@ -35,7 +35,7 @@ show_volume_when_muted = true
 
 [[block]]
 block = "networkmanager"
-on_click = "terminator -e nmtui"
+on_click = "nm-connection-editor"
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+", "proton\\d+"]
 interface_name_include = []
 ap_format = "{ssid}"
@@ -43,7 +43,7 @@ ap_format = "{ssid}"
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage}% {time}"
+format = "{percentage} {time}"
 good = 75
 info = 30
 warning = 15
