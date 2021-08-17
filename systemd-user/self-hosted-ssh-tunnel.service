@@ -1,0 +1,10 @@
+[Unit]
+Description=Open SSH Tunnel to self-hosted services
+Wants=network-online.target
+
+[Service]
+Type=forking
+ExecStart=ssh -Nf forward-tunnel-ssh
+
+[Install]
+WantedBy=multi-user.target
