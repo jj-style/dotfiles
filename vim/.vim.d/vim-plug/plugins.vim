@@ -1,10 +1,13 @@
 call plug#begin('~/.vim/plugged')
-    "bar at bottom + theme
+    " bar at bottom + theme
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     
+    " everforest theme
+    Plug 'sainnhe/everforest'
+
     " close quotes and brackets when opened
-    Plug 'jiangmiao/auto-pairs'
+    "Plug 'jiangmiao/auto-pairs'
 
     " close tags
     Plug 'alvan/vim-closetag'
@@ -40,4 +43,10 @@ call plug#begin('~/.vim/plugged')
 
     "UNIX Stuff
     Plug 'tpope/vim-eunuch'    
+
+    "Go
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+    "LaTeX
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
