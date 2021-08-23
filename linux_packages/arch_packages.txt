@@ -18,6 +18,7 @@ bitwarden-cli
 blueberry
 brave-bin
 cbonsai-git
+cheese
 cmatrix
 cmus
 code
