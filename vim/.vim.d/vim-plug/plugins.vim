@@ -47,6 +47,9 @@ call plug#begin('~/.vim/plugged')
     "Go
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+    "Rust
+    Plug 'rust-lang/rust.vim'
+
     "LaTeX
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()

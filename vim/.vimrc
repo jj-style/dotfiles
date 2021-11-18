@@ -9,6 +9,7 @@ source $HOME/.vim.d/plug-config/closetags.vim
 source $HOME/.vim.d/plug-config/nerdtree.vim
 source $HOME/.vim.d/plug-config/vim-go.vim
 source $HOME/.vim.d/plug-config/vim-latex-live.vim
+source $HOME/.vim.d/plug-config/rust.vim
 
 source $HOME/.vim.d/plug-config/everforest.vim
 
@@ -19,3 +20,5 @@ au FileType javascript setl makeprg=node\ %
 
 "set .jsx filetypes to javascript.jsx
 au BufNewFile,BufRead *.jsx	setf javascript.jsx
+
+
