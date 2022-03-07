@@ -20,5 +20,3 @@ au FileType javascript setl makeprg=node\ %
 
 "set .jsx filetypes to javascript.jsx
 au BufNewFile,BufRead *.jsx	setf javascript.jsx
-
-

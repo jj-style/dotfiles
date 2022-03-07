@@ -2,6 +2,7 @@
 
 ## program substitutes
 alias grep="rg"
+alias find="fd"
 
 
 ## git aliases
@@ -78,4 +79,14 @@ alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dcst="docker-compose start"
 alias dcsp="docker-compose stop"
+
+## kubernetes
+alias kctl="kubectl"
+alias kubctl="kubectl"
+alias kibectl="kubectl"
+alias kctl-nodes="kubectl get nodes"
+alias kctl-pods="kubectl get pods"
+alias kctl-deps="kubectl get deployments"
+alias kctl-svcs="kubectl get services"
+alias kctl-desc="kubectl describe"
 
