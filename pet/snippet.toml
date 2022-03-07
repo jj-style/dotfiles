@@ -9,11 +9,6 @@
   output = ""
 
 [[snippets]]
-  description = "gcloud sdk shell"
-  command = "docker run --rm -it gcr.io/google.com/cloudsdktool/cloud-sdk"
-  output = ""
-
-[[snippets]]
   description = "Interactive shell in a docker container with current directory mounted"
   command = "docker run --rm -it -v $PWD:/work -w /work <docker-image-name>"
   output = ""
@@ -24,21 +19,16 @@
   output = ""
 
 [[snippets]]
-  description = "Create a docker buildx builder with insecure entitlements"
-  command = "docker buildx create --name <builderName=mybuilder> --buildkitd-flags \"--allow-insecure-entitlement network.host\" --config <config=config.toml> --driver-opt network=host --use"
-  output = ""
-
-[[snippets]]
-  description = "Build multi-arch docker container with buildx and push to registry on local network"
-  command = "docker buildx build --allow=network.host --tag cluster:30500/<containerName> --add-host=cluster:<WorkerIp=192.168.0.70> --platform linux/amd64,linux/arm64 --push ."
-  output = ""
-
-[[snippets]]
   description = "start virtualbox vm machine in headless mode"
-  command = "VBoxManage startvm <machine=\"Ubuntu Server LFS201\"> --type headless"
+  command = "VBoxManage startvm <machine=\"ROS-Ubuntu\"> --type headless"
   output = ""
 
 [[snippets]]
   description = "power off virtualbox vm machine"
-  command = "VBoxManage controlvm <machine=\"Ubuntu Server LFS201\"> <method=poweroff>"
+  command = "VBoxManage controlvm <machine=\"ROS-Ubuntu\"> <method=poweroff>"
+  output = ""
+
+[[snippets]]
+  description = "Count the number of non-empty lines across all python files"
+  command = "fd -t f -g \"*.py\" -E \"__init__.py\" . -X cat -b | tail -n 1 | awk '{print $1}' | tr -d '[:space:]'"
   output = ""
