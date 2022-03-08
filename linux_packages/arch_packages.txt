@@ -10,6 +10,7 @@ autoconf
 automake
 base
 bash-completion
+bat
 betterlockscreen-git
 biber
 bind
