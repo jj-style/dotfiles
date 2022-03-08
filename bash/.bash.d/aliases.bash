@@ -3,6 +3,7 @@
 ## program substitutes
 alias grep="rg"
 alias find="fd"
+alias cat="bat"
 
 
 ## git aliases
