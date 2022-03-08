@@ -79,16 +79,19 @@ fi
 
 # colour support
 #export TERM=screen-256color
+export TERM=xterm-256color
 
 BASH_DIR=~/.bash.d
-source /usr/share/doc/pkgfile/command-not-found.bash
-source "$BASH_DIR/aliases.bash"
-source "$BASH_DIR/functions.bash"
-source "$BASH_DIR/environment.bash"
-source "$BASH_DIR/PS1.bash"
-source "$BASH_DIR/fzf/completion.bash"
-source "$BASH_DIR/fzf/key-bindings.bash"
-source "$BASH_DIR/linode.bash"
+if [[ -z "$SINGULARITY_ENVIRONMENT" ]]; then
+    source /usr/share/doc/pkgfile/command-not-found.bash
+    source "$BASH_DIR/aliases.bash"
+    source "$BASH_DIR/functions.bash"
+    source "$BASH_DIR/environment.bash"
+    source "$BASH_DIR/PS1.bash"
+    source "$BASH_DIR/fzf/completion.bash"
+    source "$BASH_DIR/fzf/key-bindings.bash"
+    source "$BASH_DIR/linode.bash"
+fi
 
 # if in terminal 1 startx
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
@@ -97,21 +100,27 @@ fi
 
 # if in terminal 2, tmux
 # attach/create tmux session if not in graphical display
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
-    if command -v tmux >/dev/null 2>&1 && [ -z "${DISPLAY}"  ]; then
+#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+    #if command -v tmux >/dev/null 2>&1 && [ -z "${DISPLAY}"  ]; then
         # if not inside a tmux session, and if no session is started, start a new session
-        [ -z "${TMUX}" ] && (tmux attach -t $USER || tmux new -s $USER  ) >/dev/null 2>&1
-    fi
-fi
+        #[ -z "${TMUX}" ] && (tmux attach -t $USER || tmux new -s $USER  ) >/dev/null 2>&1
+    #fi
+#fi
 
-NFETCH=always # always|tmux|never
-if [[ $NFETCH != "never" ]] && [[ "${XDG_VTNR}" -ne 1 ]]; then
-    if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
-        if command -v pfetch > /dev/null 2>&1; then
-            pfetch
-        fi
-    fi
-fi
+#NFETCH=always # always|tmux|never
+#if [[ $NFETCH != "never" ]] && [[ "${XDG_VTNR}" -ne 1 ]]; then
+    #if [ $NFETCH == "always" ] || ([ $NFETCH == "tmux" ] && [ ! -z "${TMUX}" ]); then
+        #if command -v pfetch > /dev/null 2>&1; then
+            #pfetch
+        #fi
+    #fi
+#fi
 # <<<<< END OF INSERTED BLOCK
 source "$HOME/.cargo/env"
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
+
+source $HOME/catkin_ws/devel/setup.bash
+export ROS_MASTER_URI=http://localhost:11578
+export GAZEBO_MASTER_URI=http://localhost:11579
+alias roscore='roscore -p 11578'
+alias ros="prime-run singularity shell --nv ~/Downloads/isos/ros.simg"
