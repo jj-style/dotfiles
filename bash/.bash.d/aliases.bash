@@ -4,6 +4,7 @@
 alias grep="rg"
 alias find="fd"
 alias cat="bat"
+alias diff="delta"
 
 
 ## git aliases
