@@ -55,4 +55,8 @@ call plug#begin('~/.vim/plugged')
 
     "LaTeX
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+    "Markdown
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/vim-markdown'
 call plug#end()
