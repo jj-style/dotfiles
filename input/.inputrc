@@ -10,3 +10,4 @@ Control-l: clear-screen
 set keymap vi-insert
 Control-l: clear-screen
 $endif
+"\C-h": backward-kill-word
