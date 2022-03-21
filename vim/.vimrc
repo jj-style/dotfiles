@@ -10,6 +10,8 @@ source $HOME/.vim.d/plug-config/nerdtree.vim
 source $HOME/.vim.d/plug-config/vim-go.vim
 source $HOME/.vim.d/plug-config/vim-latex-live.vim
 source $HOME/.vim.d/plug-config/rust.vim
+source $HOME/.vim.d/plug-config/vim-markdown.vim
+source $HOME/.vim.d/plug-config/gruvbox.vim
 
 source $HOME/.vim.d/plug-config/everforest.vim
 
