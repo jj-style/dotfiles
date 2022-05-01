@@ -13,15 +13,15 @@ nnoremap <space> za
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 
 " split windows
-nmap sh :split<Return><C-w>W
-nmap sv :vplit<Return><C-w>W
-nmap sx :close<Return><C-w>W
+nnoremap sh :split<Return><C-w>W
+nnoremap sv :vplit<Return><C-w>W
+nnoremap sx :close<Return><C-w>W
 
 " moving windows
-nnoremap <silent> <leader>h :wincmd h<CR>
-nnoremap <silent> <leader>j :wincmd j<CR>
-nnoremap <silent> <leader>k :wincmd k<CR>
-nnoremap <silent> <leader>l :wincmd l<CR>
+nnoremap <silent> <C-J> <C-W><C-J>
+nnoremap <silent> <C-K> <C-W><C-K>
+nnoremap <silent> <C-L> <C-W><C-L>
+nnoremap <silent> <C-H> <C-W><C-H>
 
 " searching stuff
 " basically grep
@@ -34,21 +34,20 @@ nmap ?? :Rg<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>p :History<CR>
 " search for word under cursor across files
-nnoremap <leader>w :Rg <C-R>=expand("<cword>")<CR><CR>
-nnorema <leader>x :Windows!<CR>
+nnoremap <silent> <leader>w :Rg <C-R>=expand("<cword>")<CR><CR>
 " search on some syntax
 nnoremap <leader>b :BTags<CR>
 nnoremap <leader>c :Commands<CR>
 nnoremap <leader>t :Filetypes<CR>
 
 "substitute under cursor
-nmap <leader>r :%s/<<C-r><C-w\>/<C-r><C-w>/gI<Left><Left><Left>
+nmap <leader>r :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 
 " git fugitive
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gs :Git<cr>
+nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>ga :Gwrite<cr>
-nnoremap <leader>gl :Glog<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>g> :Gpush<cr>
-nnoremap <leader>g< :Gpull<cr>
+nnoremap <leader>gl :Git log<cr>
+nnoremap <leader>gd :Git diff<cr>
+nnoremap <leader>g> :Git push<cr>
+nnoremap <leader>g< :Git pull<cr>
