@@ -4,16 +4,16 @@ name = "gruvbox-dark"
 [icons]
 name = "awesome"
 
-[[block]]
-block = "pacman"
-interval = 600
-format = "{pacman} + {aur} = {both} updates"
-format_singular = "{both} updates available"
-format_up_to_date = "system up to date"
-critical_updates_regex = "(linux|linux-lts|linux-zen)"
-# aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
-aur_command = "yay -Qua"
-hide_when_uptodate = true
+#[[block]]
+#block = "pacman"
+#interval = 600
+#format = "{pacman} + {aur} = {both} updates"
+#format_singular = "{both} updates available"
+#format_up_to_date = "system up to date"
+#critical_updates_regex = "(linux|linux-lts|linux-zen)"
+## aur_command should output available updates to stdout (ie behave as echo -ne "update\n")
+#aur_command = "yay -Qua"
+#hide_when_uptodate = true
 
 [[block]]
 block = "disk_space"
