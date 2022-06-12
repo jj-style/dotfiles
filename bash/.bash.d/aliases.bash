@@ -92,3 +92,5 @@ alias kctl-deps="kubectl get deployments"
 alias kctl-svcs="kubectl get services"
 alias kctl-desc="kubectl describe"
 
+# DNS Toys
+function dy { dig +noall +answer +additional "$1" @dns.toys; }
