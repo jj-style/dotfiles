@@ -27,11 +27,12 @@
     ],
     "modules-right": [
         "network",
-        //"idle_inhibitor",
-        // "memory",
-        // "cpu",
+        "idle_inhibitor",
+        //"memory",
+        "cpu",
         // "temperature",
         //"custom/keyboard-layout",
+        //"keyboard-state",
         "backlight",
         "pulseaudio",
         "battery",
@@ -70,6 +71,16 @@
             ""  // Icon: battery-empty
         ],
         "tooltip": true
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
     },
 
     "clock#time": {
@@ -127,8 +138,9 @@
     },
 
     "network": {
+        "interface": "wlp*",
         "interval": 3,
-        "format-wifi": " {essid}", // Icon: wifi
+        "format-wifi": " {essid} ({ipaddr})", // Icon: wifi
         //"format-ethernet": " {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
         "format-ethernet": " {ipaddr}", // Icon: ethernet
 	"format-disconnected": "⚠  Disconnected",
@@ -146,10 +158,10 @@
             "phone": "", // Icon: phone
             "portable": "", // Icon: phone
             "car": "", // Icon: car
-            "default": ["", ""] // Icons: volume-down, volume-up
+            "default": ["", "", ""] // Icons: volume-down, volume-up
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "alacritty --title='Sound Mixer' --command='pulsemixer'",
+        "on-click-right": "pavucontrol",
         "tooltip": true
     },
 
