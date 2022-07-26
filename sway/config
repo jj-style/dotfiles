@@ -37,11 +37,13 @@ output "*" bg /home/jj/Pictures/arch.jpg fill
 #
 # Example configuration:
 #
- exec swayidle -w \
+set $lock swaylock -f --color 000000 --image ~/Pictures/wallpaper.png --indicator-caps-lock
+exec swayidle -w \
           timeout 300 'swaylock -f -c 000000' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
-set $lock swaylock -f -c 000000
+          before-sleep '$lock'
+
+bindsym $mod+pause swayidle -w before-sleep '$lock'
 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -257,7 +259,7 @@ default_border pixel 3
 focus_follows_mouse no
 
 # keys
-#bindsym $mod+Escape exec $lock
+bindsym $mod+Escape exec $lock
 #bindsym $mod+b exec firefox
 #bindsym $mod+Shift+b exec firefox --private-window
 #bindsym $mod+e exec $term -e ranger
@@ -308,6 +310,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%- # decr
 ########################
 ##### statup apps ######
 ########################
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id nm-applet --indicator
 exec --no-startup-id pa-applet
