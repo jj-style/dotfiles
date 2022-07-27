@@ -331,7 +331,8 @@ bindsym $mod+Shift+b exec firefox
 bindsym $mod+e exec $terminal -e ranger
 bindsym $mod+Shift+e exec thunar
 bindcode $mod+21 exec galculator
-bindsym Print exec --no-startup-id xfce4-screenshooter -i
+#bindsym Print exec --no-startup-id xfce4-screenshooter -i
+bindsym Print exec --no-startup-id grim -g "$(slurp)"
 # alt+tab behaviour for switching windows across all open workspaces
 # TODO: wofi
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
