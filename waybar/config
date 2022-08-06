@@ -27,6 +27,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "network#wireguard",
         "network",
         "idle_inhibitor",
         //"memory",
@@ -146,6 +147,14 @@
         "format-ethernet": " {ipaddr}", // Icon: ethernet
 	"format-disconnected": "⚠  Disconnected",
         "tooltip-format": "{ifname}: {ipaddr} (signal: {signalStrength}%)"
+    },
+
+    "network#wireguard": {
+        "interface": "wg*",
+        "interval": 3,
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}: {ipaddr}"
     },
 
     "pulseaudio": {
