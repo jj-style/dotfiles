@@ -23,5 +23,8 @@ au FileType javascript setl makeprg=node\ %
 "set .jsx filetypes to javascript.jsx
 au BufNewFile,BufRead *.jsx	setf javascript.jsx
 
+"run `chezmoi apply` whenever dotfile saved
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+
 " set gruvbox last so load plugins first
 autocmd vimenter * ++nested colorscheme gruvbox
