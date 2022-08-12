@@ -1,1 +1,17 @@
 settings.json
+
+{{- if ne .chezmoi.os "linux" }}
+# ignore when not on linux
+.inputrc
+.Xresources
+{{- end }}
+
+{{- if ( and (eq .chezmoi.os "linux") (ne .chezmoi.hostname "arch") ) }}
+# ignore when on linux but not on my laptop (arch)
+.config/i3*
+.config/sway
+.config/waybar
+.config/wofi
+.config/rofi
+.config/libinput-gestures.conf
+{{- end }}
