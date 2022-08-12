@@ -6,6 +6,8 @@ alias find="fd"
 alias cat="bat"
 alias diff="delta"
 
+## program shortcuts
+alias cm="chezmoi"
 
 ## git aliases
 alias ga="git add ."
@@ -39,19 +41,6 @@ alias pvpn-tor="protonvpn-cli c --tor"
 alias pvpns="protonvpn-cli s"
 alias pvpnd="protonvpn-cli d"
 alias pvpndu="pvpn d; pvpn c -f"
-#alias vpn-conn="protonvpn-cli s | grep -q \"No active\""
-
-
-#alias pvpn="sudo protonvpn"
-#alias pvpn-sc="sudo protonvpn c --sc"
-#alias pvpn-f="sudo protonvpn c -f"
-#alias pvpn-r="sudo protonvpn c -r"
-#alias pvpn-uk="sudo protonvpn c --cc UK"
-#alias pvpn-p2p="sudo protonvpn c --p2p"
-#alias pvpn-tor="sudo protonvpn c --tor"
-#alias pvpns="sudo protonvpn s"
-#alias pvpnd="sudo protonvpn d"
-#alias vpn-conn="sudo protonvpn s | grep -q \"No active\""
 
 ## misc
 # get back to home directory
@@ -72,9 +61,9 @@ alias pcaman="pacman"
 alias pcmna="pacman"
 
 ## linode
-alias open-tunnel="echo -n tunnel open... && ssh -N -R *:2222:localhost:22 linode-tunnel-server"
-alias open-tunnel-bg="ssh -Nf -R *:2222:localhost:22 linode-tunnel-server"
-alias close-tunnel='kill $(ps -e -o pid,cmd | grep "linode-tunnel-server$" | awk "{print \$1}")'
+#alias open-tunnel="echo -n tunnel open... && ssh -N -R *:2222:localhost:22 linode-tunnel-server"
+#alias open-tunnel-bg="ssh -Nf -R *:2222:localhost:22 linode-tunnel-server"
+#alias close-tunnel='kill $(ps -e -o pid,cmd | grep "linode-tunnel-server$" | awk "{print \$1}")'
 
 ## docker
 alias dcu="docker-compose up -d"
