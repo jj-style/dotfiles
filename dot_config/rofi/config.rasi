@@ -1,0 +1,9 @@
+configuration {
+    modi: "run";
+    font: "hack 10";
+    combi-modi: "window,drun,ssh";
+    icon-theme: "paper";
+    show-icons: true;
+    terminal: "xfce4-terminal";
+ }
+@import "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
