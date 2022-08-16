@@ -59,4 +59,9 @@ call plug#begin('~/.vim/plugged')
     "Markdown
     Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
+
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
