@@ -329,7 +329,7 @@ exec --no-startup-id guake
 bindsym $mod+b exec torbrowser-launcher
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+Control+b exec bitwarden-desktop
-bindsym $mod+e exec $terminal -e ranger
+bindsym $mod+e exec $term -e ranger
 bindsym $mod+Shift+e exec thunar
 bindcode $mod+21 exec galculator
 #bindsym Print exec --no-startup-id xfce4-screenshooter -i
