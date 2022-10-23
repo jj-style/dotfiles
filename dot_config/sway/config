@@ -349,3 +349,16 @@ for_window [window_role="task_dialog"] floating enable
 for_window [title="mpv"] floating enable
 for_window [title="galculator"] floating enable
 for_window [title="xeyes"] floating enable
+
+########################
+#### Set GTK Theme #####
+########################
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    #gsettings set $gnome-schema gtk-theme 'Adwaita'
+    gsettings set $gnome-schema gtk-theme 'Gruvbox-Material-Dark'
+    gsettings set $gnome-schema icon-theme 'Tela-brown-dark'
+    gsettings set $gnome-schema cursor-theme 'Adwaita'
+    gsettings set $gnome-schema font-name 'Noto Sans, 10'
+}
