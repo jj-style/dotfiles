@@ -322,6 +322,7 @@ exec --no-startup-id blueberry-tray
 exec --no-startup-id ~/.local/bin/pvpn_autostart.sh
 exec --no-startup-id bitwarden-desktop
 exec --no-startup-id guake
+exec --no-startup-id radiotray-ng
 
 ########################
 ##### key bindings #####
@@ -337,6 +338,7 @@ bindsym Print exec --no-startup-id grim -g "$(slurp)"
 # alt+tab behaviour for switching windows across all open workspaces
 # TODO: wofi
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
+bindcode $mod+61 exec --no-startup-id guake-toggle
 
 ########################
 #### window config #####
@@ -349,6 +351,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [title="mpv"] floating enable
 for_window [title="galculator"] floating enable
 for_window [title="xeyes"] floating enable
+for_window [class="Guake"] floating enable
 
 ########################
 #### Set GTK Theme #####
