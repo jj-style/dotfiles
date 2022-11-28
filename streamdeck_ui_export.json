@@ -1,0 +1,188 @@
+{
+    "streamdeck_ui_version": 1,
+    "state": {
+        "BL23L2B40160": {
+            "buttons": {
+                "0": {
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/code.png",
+                        "text": "",
+                        "switch_page": 2,
+                        "brightness_change": 0,
+                        "write": ""
+                    },
+                    "1": {
+                        "text": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/visualstudio.png",
+                        "switch_page": 3
+                    },
+                    "2": {
+                        "icon": "/home/jj/.config/streamdeck/assets/git.png",
+                        "switch_page": 4
+                    },
+                    "3": {
+                        "icon": "/home/jj/.config/streamdeck/assets/audio-wave.png",
+                        "switch_page": 10
+                    },
+                    "4": {},
+                    "5": {}
+                },
+                "1": {
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "icon": "/home/jj/.config/streamdeck/assets/test.png",
+                        "keys": "ctrl+alt+shift+t,t"
+                    },
+                    "2": {
+                        "icon": "/home/jj/.config/streamdeck/assets/run.png",
+                        "keys": "ctrl+alt+shift+t,r"
+                    },
+                    "3": {
+                        "icon": "/home/jj/.config/streamdeck/assets/build.png",
+                        "keys": "ctrl+alt+shift+t,b"
+                    },
+                    "4": {
+                        "icon": "/home/jj/.config/streamdeck/assets/clean-simple.png",
+                        "keys": "ctrl+alt+shift+t,c"
+                    },
+                    "5": {
+                        "icon": "/home/jj/.config/streamdeck/assets/lint-simple.png",
+                        "keys": "ctrl+alt+shift+t,l"
+                    }
+                },
+                "2": {
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "icon": "/home/jj/.config/streamdeck/assets/test.png",
+                        "keys": "ctrl+alt+shift+t"
+                    },
+                    "2": {
+                        "icon": "/home/jj/.config/streamdeck/assets/run.png",
+                        "keys": "F5"
+                    },
+                    "3": {
+                        "icon": "/home/jj/.config/streamdeck/assets/build.png",
+                        "keys": "ctrl+shift+b"
+                    },
+                    "4": {},
+                    "5": {}
+                },
+                "3": {
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "keys": "",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "keys": "ctrl+alt+shift+g,s",
+                        "text": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/git-add.png"
+                    },
+                    "2": {
+                        "text": "",
+                        "keys": "ctrl+alt+shift+g,c",
+                        "icon": "/home/jj/.config/streamdeck/assets/git-commit.png"
+                    },
+                    "3": {
+                        "text": "",
+                        "keys": "ctrl+alt+shift+g,p",
+                        "icon": "/home/jj/.config/streamdeck/assets/git-push.png"
+                    },
+                    "4": {
+                        "text": "",
+                        "keys": "ctrl+alt+shift+g,l",
+                        "icon": "/home/jj/.config/streamdeck/assets/git-pull.png"
+                    },
+                    "5": {
+                        "text": "",
+                        "keys": "ctrl+alt+shift+g,o",
+                        "icon": "/home/jj/.config/streamdeck/assets/git-branch.png"
+                    }
+                },
+                "4": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "5": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "6": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "7": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "8": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {}
+                },
+                "9": {
+                    "0": {
+                        "text": "",
+                        "keys": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "text": "",
+                        "keys": "",
+                        "command": "amixer set Capture toggle",
+                        "icon": "/home/jj/.config/streamdeck/assets/microphone.png"
+                    },
+                    "2": {
+                        "text": "",
+                        "keys": "media_volume_mute",
+                        "icon": "/home/jj/.config/streamdeck/assets/speaker.png"
+                    },
+                    "3": {
+                        "text": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/media-skip-backward.png",
+                        "command": "playerctl previous",
+                        "keys": ""
+                    },
+                    "4": {
+                        "text": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/play.png",
+                        "command": "playerctl play-pause",
+                        "keys": ""
+                    },
+                    "5": {
+                        "keys": "",
+                        "icon": "/home/jj/.config/streamdeck/assets/media-skip-forward.png",
+                        "command": "playerctl next"
+                    }
+                }
+            },
+            "page": 1
+        }
+    }
+}

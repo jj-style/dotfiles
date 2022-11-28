@@ -20,27 +20,27 @@
         "when": "canNavigateForward"
     },
     {
-        "key": "ctrl+shift+f5",
+        "key": "ctrl+alt+shift+t r",
         "command": "workbench.action.tasks.runTask",
         "args": "makeRun"
     },
     {
-        "key": "ctrl+alt+shift+b",
-        "command": "-workbench.action.tasks.runTask",
+        "key": "ctrl+alt+shift+t b",
+        "command": "workbench.action.tasks.runTask",
         "args": "makeBuild"
     },
     {
-        "key": "ctrl+alt+shift+t",
+        "key": "ctrl+alt+shift+t t",
         "command": "workbench.action.tasks.runTask",
         "args": "makeTest"
     },
     {
-        "key": "ctrl+alt+shift+c",
+        "key": "ctrl+alt+shift+t c",
         "command": "workbench.action.tasks.runTask",
         "args": "makeClean"
     },
     {
-        "key": "ctrl+alt+shift+c",
+        "key": "ctrl+alt+shift+t l",
         "command": "workbench.action.tasks.runTask",
         "args": "makeLint"
     },

@@ -1,5 +1,7 @@
 settings.json
 keybindings.json
+tasks.json
+streamdeck_ui_export.json
 
 {{- if ne .chezmoi.os "linux" }}
 # ignore when not on linux
