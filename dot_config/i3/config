@@ -289,6 +289,7 @@ exec --no-startup-id ~/.local/bin/pvpn_autostart.sh
 exec --no-startup-id bitwarden-desktop
 exec --no-startup-id guake
 exec --no-startup-id radiotray-ng
+exec --no-startup-id streamdeck --no-ui
 
 ########################
 ##### key bindings #####
@@ -299,6 +300,7 @@ bindsym $mod+e exec $terminal -e ranger
 bindsym $mod+Shift+e exec thunar
 bindcode $mod+21 exec galculator
 bindsym Print exec --no-startup-id xfce4-screenshooter -i
+bindsym $mod+Shift+Control+b exec --no-startup-id bitwarden-desktop
 # alt+tab behaviour for switching windows across all open workspaces
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
 
