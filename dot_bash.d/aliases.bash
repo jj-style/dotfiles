@@ -51,7 +51,7 @@ alias xcopy="xclip -sel clip"
 alias xpaste="xclip -o -sel clip"
 
 # bitwarden-cli unlock copy export command to clipboard
-alias bw-unlock-cp='bw unlock | grep "\$ export" | awk "{print substr(\$0, index(\$0,\$2))}" | xcopy'
+alias bw-unlock-cp='bw unlock | grep "export" | awk "{print substr(\$0, index(\$0,\$2))}" | xcopy'
 
 ## typos
 alias tlrd="tldr"
