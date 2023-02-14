@@ -249,23 +249,7 @@ bindsym Control+Mod1+Delete mode "$mode_system"
 ########################
 ### External Display ###
 ########################
-
-# Set the shortcuts and what they do
-set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
-#set $PrimaryDisplay xrandr | grep "connected primary" | awk '{ print $1 }'
-set $PrimaryDisplay eDP1
-mode "$mode_display" {
-    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of $PrimaryDisplay, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of $PrimaryDisplay, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-# Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
+bindsym $mod+x exec --no-startup-id printf "disconnect\nextend\nmirror" | rofi -dmenu -i -p "Monitor Configuration" | xargs -I _ ~/.local/bin/monitor-config.sh _
 
 
 ########################

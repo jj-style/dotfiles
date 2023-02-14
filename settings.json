@@ -35,5 +35,7 @@
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
     "vsicons.dontShowNewVersionMessage": true,
-    "rust-client.engine": "rust-analyzer"
+    "rust-client.engine": "rust-analyzer",
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "editor.fontFamily": "'UbuntuMono Nerd Font'"
 }
