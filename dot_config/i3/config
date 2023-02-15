@@ -249,7 +249,7 @@ bindsym Control+Mod1+Delete mode "$mode_system"
 ########################
 ### External Display ###
 ########################
-bindsym $mod+x exec --no-startup-id printf "disconnect\nextend\nmirror" | rofi -dmenu -i -p "Monitor Configuration" | xargs -I _ ~/.local/bin/monitor-config.sh _
+bindsym $mod+x exec --no-startup-id printf "disconnect\nextend\nmirror\ndock1\ndock2\ndock3" | rofi -dmenu -i -p "Monitor Configuration" | xargs -I _ ~/.local/bin/monitor-config.sh _
 
 
 ########################
