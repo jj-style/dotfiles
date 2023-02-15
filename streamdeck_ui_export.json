@@ -24,70 +24,79 @@
                         "icon": "/home/jj/.config/streamdeck/assets/audio-wave.png",
                         "switch_page": 10
                     },
-                    "4": {},
+                    "4": {
+                        "icon": "/home/jj/.config/streamdeck/assets/home-assistant.png",
+                        "switch_page": 6
+                    },
                     "5": {}
                 },
                 "1": {
                     "0": {
-                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/reply.svg",
                         "switch_page": 1
                     },
                     "1": {
-                        "icon": "/home/jj/.config/streamdeck/assets/test.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/beaker.svg",
                         "keys": "ctrl+alt+shift+t,t"
                     },
                     "2": {
-                        "icon": "/home/jj/.config/streamdeck/assets/run.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/play.svg",
                         "keys": "ctrl+alt+shift+t,r"
                     },
                     "3": {
-                        "icon": "/home/jj/.config/streamdeck/assets/build.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/file-binary.svg",
                         "keys": "ctrl+alt+shift+t,b"
                     },
                     "4": {
-                        "icon": "/home/jj/.config/streamdeck/assets/clean-simple.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/wand.svg",
                         "keys": "ctrl+alt+shift+t,c"
                     },
                     "5": {
-                        "icon": "/home/jj/.config/streamdeck/assets/lint-simple.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/search-fuzzy.svg",
                         "keys": "ctrl+alt+shift+t,l"
                     }
                 },
                 "2": {
                     "0": {
-                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/reply.svg",
                         "switch_page": 1
                     },
                     "1": {
-                        "icon": "/home/jj/.config/streamdeck/assets/test.png",
-                        "keys": "ctrl+alt+shift+t"
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/file-binary.svg",
+                        "keys": "ctrl+shift+b"
                     },
                     "2": {
-                        "icon": "/home/jj/.config/streamdeck/assets/run.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/play.svg",
                         "keys": "F5"
                     },
                     "3": {
-                        "icon": "/home/jj/.config/streamdeck/assets/build.png",
-                        "keys": "ctrl+shift+b"
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/beaker.svg",
+                        "keys": "ctrl+alt+shift+t"
                     },
-                    "4": {},
-                    "5": {}
+                    "4": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug.svg",
+                        "switch_page": 5
+                    },
+                    "5": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/stop-circle.svg",
+                        "keys": "shift+F5"
+                    }
                 },
                 "3": {
                     "0": {
-                        "icon": "/home/jj/.config/streamdeck/assets/back.png",
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/reply.svg",
                         "keys": "",
                         "switch_page": 1
                     },
                     "1": {
                         "keys": "ctrl+alt+shift+g,s",
                         "text": "",
-                        "icon": "/home/jj/.config/streamdeck/assets/git-add.png"
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/new-file.svg"
                     },
                     "2": {
                         "text": "",
                         "keys": "ctrl+alt+shift+g,c",
-                        "icon": "/home/jj/.config/streamdeck/assets/git-commit.png"
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/git-commit.svg"
                     },
                     "3": {
                         "text": "",
@@ -102,20 +111,45 @@
                     "5": {
                         "text": "",
                         "keys": "ctrl+alt+shift+g,o",
-                        "icon": "/home/jj/.config/streamdeck/assets/git-branch.png"
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/git-merge.svg"
                     }
                 },
                 "4": {
-                    "0": {},
-                    "1": {},
-                    "2": {},
-                    "3": {},
-                    "4": {},
-                    "5": {}
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/reply.svg",
+                        "switch_page": 3
+                    },
+                    "1": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug-start.svg",
+                        "keys": "F5"
+                    },
+                    "2": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug-stop.svg",
+                        "keys": "shift+F5"
+                    },
+                    "3": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug-step-into.svg",
+                        "keys": "F11"
+                    },
+                    "4": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug-step-over.svg",
+                        "keys": "F10"
+                    },
+                    "5": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/debug-step-out.svg",
+                        "keys": "shift+F11"
+                    }
                 },
                 "5": {
-                    "0": {},
-                    "1": {},
+                    "0": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/reply.svg",
+                        "switch_page": 1
+                    },
+                    "1": {
+                        "icon": "/home/jj/.config/streamdeck/assets/vscode/lightbulb.svg",
+                        "text": "bedroom",
+                        "command": "/home/jj/.config/streamdeck/scripts/hass-toggle-lights.sh light.bedroom_lights"
+                    },
                     "2": {},
                     "3": {},
                     "4": {},
@@ -182,7 +216,7 @@
                     }
                 }
             },
-            "page": 1
+            "page": 5
         }
     }
 }
