@@ -1,8 +1,8 @@
 [theme]
-name = "gruvbox-dark"
+theme = "gruvbox-dark"
 
 [icons]
-name = "awesome"
+icons = "awesome5"
 
 #[[block]]
 #block = "pacman"
@@ -18,22 +18,25 @@ name = "awesome"
 [[block]]
 block = "disk_space"
 path = "/home"
-alias = "/home"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
+format = " $icon $available "
+format_alt = " $icon $available / $total "
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used;G}/{mem_total;G}({mem_used_percents})"
-format_swap = "{swap_used;G}/{swap_total;G}({swap_used_percents})"
+format = " $icon $mem_used_percents.eng(w:1) "
+format_alt = " $icon_swap $swap_free.eng(w:3,u:B,p:M)/$swap_total.eng(w:3,u:B,p:M) "
+interval = 30
+warning_mem = 70
+critical_mem = 90
 
 [[block]]
 block = "cpu"
-interval = 1
+interval = 3
 
 [[block]]
 block = "backlight"
@@ -45,22 +48,16 @@ max_vol = 100
 show_volume_when_muted = true
 
 [[block]]
-block = "networkmanager"
-on_click = "nm-connection-editor"
-interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+", "proton\\d+"]
-interface_name_include = []
-ap_format = "{ssid}"
+block = "net"
+format = " $icon {$ssid|} $device "
 
 [[block]]
 block = "battery"
-interval = 10
-format = "{percentage} {time}"
-good = 75
-info = 30
-warning = 15
-critical = 10
+format = " $icon $percentage {$time |}"
 
 [[block]]
 block = "time"
 interval = 60
-format = "%a %d/%m %R"
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a %d-%m %R') "
+short = " $icon $timestamp.datetime(f:%R) "
