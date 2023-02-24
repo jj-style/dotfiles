@@ -119,4 +119,8 @@ source "$BASH_DIR/fzf/key-bindings.bash"
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 eval "$(direnv hook bash)"
+
+{{/* starship not working well on nix  */}}
+{{ if ne .chezmoi.osRelease.name "NixOS" }}
 eval "$(starship init bash)"
+{{ end }}
