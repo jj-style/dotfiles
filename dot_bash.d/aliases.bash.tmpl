@@ -81,7 +81,7 @@ alias kctl-deps="kubectl get deployments"
 alias kctl-svcs="kubectl get services"
 alias kctl-desc="kubectl describe"
 
-{{ if eq .chezmoi.osRelease.name "nixos" }}
+{{ if eq .chezmoi.osRelease.name "NixOS" }}
 ## nixos
 alias nixos-rebuild="sudo nixos-rebuild"
 alias nxrs="nixos-rebuild switch"
