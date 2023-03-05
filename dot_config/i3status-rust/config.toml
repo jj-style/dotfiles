@@ -39,6 +39,11 @@ block = "cpu"
 interval = 3
 
 [[block]]
+block = "nvidia_gpu"
+interval = 1
+format = " $icon MX250 $utilization $temperature $clocks "
+
+[[block]]
 block = "backlight"
 
 [[block]]
@@ -50,6 +55,11 @@ show_volume_when_muted = true
 [[block]]
 block = "net"
 format = " $icon {$ssid|} $device "
+
+[[block]]
+block = "custom"
+command = "echo '\uf0ac ' `curl ifconfig.me`" # assumes fontawesome icons
+interval = 60
 
 [[block]]
 block = "battery"
