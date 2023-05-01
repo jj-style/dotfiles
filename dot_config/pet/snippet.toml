@@ -37,3 +37,7 @@
   description = "convert audio to mp3"
   command = "ffmpeg -i <input_file> -vn -ar <sample_rate=44100> -ac <channels=2> -b:a <bitrate=192K> <output_file?"
   output = ""
+
+[[snippets]]
+  description = "download youtube audio with ytfzf"
+  command = "ytfzf --download --audio-only -t <query>"
