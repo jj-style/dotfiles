@@ -24,6 +24,12 @@ call plug#begin('~/.vim/plugged')
     
     " comment toggle
     Plug 'scrooloose/nerdcommenter'
+
+    " split/join
+    Plug 'AndrewRadev/splitjoin.vim'
+
+    " code snippets
+    Plug 'SirVer/ultisnips'
     
     " expand to html
     Plug 'mattn/emmet-vim'

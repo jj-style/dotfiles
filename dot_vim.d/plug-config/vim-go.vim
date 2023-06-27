@@ -1,25 +1,45 @@
+" https://github.com/fatih/vim-go-tutorial
+
 " run go imports on file save
 let g:go_fmt_command = "goimports"
 
+" styling
+
+" highlight types
+let g:go_highlight_types = 1
+" highlight fields
+let g:go_highlight_fields = 1
+" highlight functions
+let g:go_highlight_functions = 1
+" highlight function calls
+let g:go_highlight_function_calls = 0
+" highlight operators
+let g:go_highlight_operators = 0
+" highlight extra types
+let g:go_highlight_extra_types = 1
+" highlight build constraints
+let g:go_highlight_build_constraints = 1
+" highlight generate tags
+let g:go_highlight_generate_tags = 1
 " automatically highlight variable your cursor is on
 let g:go_auto_sameids = 0
 
+" show type infor on hover
+let g:go_auto_type_info = 1
+" set updatetime=100
 
 " ============= KEY BINDINGS FOR GO =============== "
 " run all tests in the current file
-autocmd BufEnter *.go nmap <leader>t  <Plug>(go-test)
-
+autocmd FileType go nmap <leader>vgt  <Plug>(go-test)
 " run the current test
-autocmd BufEnter *.go nmap <leader>tt <Plug>(go-test-func)
+autocmd FileType go nmap <leader>vgtt <Plug>(go-test-func)
 
-" show function signature
-autocmd BufEnter *.go nmap <leader>i  <Plug>(go-info)
+" build & run
+autocmd FileType go nmap <leader>vgb  <Plug>(go-build)
+autocmd FileType go nmap <leader>vgr  <Plug>(go-run)
 
-" show interfaces a type implements
-autocmd BufEnter *.go nmap <leader>ii  <Plug>(go-implements)
-
-" show callers of a function
-autocmd BufEnter *.go nmap <leader>cc  <Plug>(go-callers)
-
-autocmd BufEnter *.go nmap <leader>bb  <Plug>(go-build)
-autocmd BufEnter *.go nmap <leader>rr  <Plug>(go-run)
+" alternate /b/ test files with :A[VST]?
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')

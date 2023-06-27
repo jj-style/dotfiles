@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term xfce4-terminal
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -319,7 +319,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id blueberry-tray
 #exec --no-startup-id feh --bg-fill ~/Pictures/arch.jpg
 # exec --no-startup-id xfce4-clipman
-exec --no-startup-id ~/.local/bin/pvpn_autostart.sh
+#exec --no-startup-id ~/.local/bin/pvpn_autostart.sh
 exec --no-startup-id bitwarden-desktop
 exec --no-startup-id guake
 exec --no-startup-id radiotray-ng
@@ -335,6 +335,7 @@ bindsym $mod+Shift+e exec thunar
 bindcode $mod+21 exec galculator
 #bindsym Print exec --no-startup-id xfce4-screenshooter -i
 bindsym Print exec --no-startup-id grim -g "$(slurp)"
+bindsym $mod+Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 # alt+tab behaviour for switching windows across all open workspaces
 # TODO: wofi
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"

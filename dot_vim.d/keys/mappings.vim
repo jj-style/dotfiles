@@ -14,7 +14,7 @@ vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 
 " split windows
 nnoremap sh :split<Return><C-w>W
-nnoremap sv :vplit<Return><C-w>W
+nnoremap sv :vsplit<Return><C-w>W
 nnoremap sx :close<Return><C-w>W
 
 " moving windows
@@ -47,7 +47,7 @@ nmap <leader>r :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 nnoremap <leader>gs :Git<cr>
 nnoremap <leader>gc :Git commit<cr>
 nnoremap <leader>ga :Gwrite<cr>
-nnoremap <leader>gl :Git log<cr>
+nnoremap <leader>gl :Git log --pretty<cr>
 nnoremap <leader>gd :Git diff<cr>
 nnoremap <leader>g> :Git push<cr>
 nnoremap <leader>g< :Git pull<cr>
