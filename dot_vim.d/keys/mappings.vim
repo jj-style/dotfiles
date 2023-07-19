@@ -51,3 +51,6 @@ nnoremap <leader>gl :Git log --pretty<cr>
 nnoremap <leader>gd :Git diff<cr>
 nnoremap <leader>g> :Git push<cr>
 nnoremap <leader>g< :Git pull<cr>
+
+" alternate
+nnoremap <silent> <leader>alt :Alternate<cr>

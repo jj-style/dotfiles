@@ -37,6 +37,9 @@ call plug#begin('~/.vim/plugged')
     " change surrounding quotes/tags/brackets   
     Plug 'tpope/vim-surround'
 
+    " alternate header files
+    Plug 'ton/vim-alternate'
+
     " prettier for vim
     Plug 'prettier/vim-prettier', { 'do': 'npm install' }
     
