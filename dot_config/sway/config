@@ -277,29 +277,10 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-
-
 ########################
 ### External Display ###
 ########################
-
-# Set the shortcuts and what they do
-set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
-#set $PrimaryDisplay xrandr | grep "connected primary" | awk '{ print $1 }'
-set $PrimaryDisplay eDP1
-mode "$mode_display" {
-    bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of $PrimaryDisplay, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of $PrimaryDisplay, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-# Declare here the shortcut to bring the display selection menu
-bindsym $mod+x mode "$mode_display"
-
+bindsym $mod+x exec --no-startup-id printf "disconnect\nextend\nmirror\ndock1\ndock2\ndock3" | rofi -dmenu -i -p "Monitor Configuration" | xargs -I _ ~/.local/bin/sway-monitor-config.sh _
 
 ########################
 ## Brightness Control ##
@@ -339,13 +320,15 @@ bindsym $mod+Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 # alt+tab behaviour for switching windows across all open workspaces
 # TODO: wofi
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
-bindcode $mod+61 exec --no-startup-id guake-toggle
+bindcode $mod+61 exec --no-startup-id ~/.local/bin/guake-toggle-sway.sh
 
 ########################
 #### window config #####
 ########################
 # Default workspace for Spotify
-for_window [class="Spotify"] move --no-auto-back-and-forth container to workspace $ws10
+#for_window [class="Spotify"] move --no-auto-back-and-forth container to workspace 10
+assign [class="Spotify"]  10
+assign [app_id="org.jellyfin.jellyfinmediaplayer"]  10
 for_window [title="Preferences$"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
