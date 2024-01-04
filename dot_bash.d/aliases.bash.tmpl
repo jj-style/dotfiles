@@ -3,9 +3,9 @@
 ## program substitutes
 alias grep="rg"
 alias find="fd"
-{{ if eq .chezmoi.osRelease.name "arch" }}
+{{ if eq .chezmoi.osRelease.id "arch" }}
 alias cat="bat"
-{{ else if eq .chezmoi.osRelease.name "debian" "ubuntu" }}
+{{ else if eq .chezmoi.osRelease.id "debian" "ubuntu" }}
 alias cat="batcat"
 {{ end }}
 alias diff="delta"
