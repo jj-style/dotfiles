@@ -287,6 +287,9 @@ bindsym Print exec --no-startup-id xfce4-screenshooter -i
 bindsym $mod+Shift+Control+b exec --no-startup-id bitwarden-desktop
 # alt+tab behaviour for switching windows across all open workspaces
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
+bindsym $mod+Shift+Control+1 exec --no-startup-id ~/.local/bin/wallpaper-change.sh 1
+bindsym $mod+Shift+Control+2 exec --no-startup-id ~/.local/bin/wallpaper-change.sh 2
+bindsym $mod+Shift+Control+3 exec --no-startup-id ~/.local/bin/wallpaper-change.sh 3
 
 ########################
 #### window config #####

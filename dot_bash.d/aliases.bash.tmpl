@@ -3,7 +3,11 @@
 ## program substitutes
 alias grep="rg"
 alias find="fd"
+{{ if eq .chezmoi.osRelease.name "arch" }}
 alias cat="bat"
+{{ else if eq .chezmoi.osRelease.name "debian" "ubuntu" }}
+alias cat="batcat"
+{{ end }}
 alias diff="delta"
 
 ## program shortcuts

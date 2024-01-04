@@ -321,6 +321,9 @@ bindsym $mod+Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 # TODO: wofi
 bindsym Mod1+Tab exec --no-startup-id "rofi -modi 'window' -show window -font 'DejaVu 13'"
 bindcode $mod+61 exec --no-startup-id ~/.local/bin/guake-toggle-sway.sh
+bindsym $mod+Shift+Control+0 exec --no-startup-id sh -c "ln -sfn ~/.local/share/wallpapers/default ~/.local/share/wallpapers/active"
+bindsym $mod+Shift+Control+1 exec --no-startup-id sh -c "ln -sfn ~/.local/share/wallpapers/gallery1 ~/.local/share/wallpapers/active"
+exec --no-startup-id ln -sfn ~/.local/share/wallpapers/default ~/.local/share/wallpapers/active && ~/.local/bin/wallpaper-slideshow.sh ~/.local/share/wallpapers/active 10
 
 ########################
 #### window config #####
